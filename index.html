@@ -62,6 +62,7 @@
             var windchimes = new buzz.sound("audio/WindChimesMetal_SFXB.1091.wav");
             var bubble = new buzz.sound("audio/hell bubble.wav");
             var minnie = new buzz.sound("audio/minnie.wav");
+            var sad = new buzz.sound("audio/sad.wav");
 
             
             window.onload = function() {
@@ -72,6 +73,8 @@
                 document.getElementById('crack').addEventListener('mouseover', function () {crack.play(); });
                 document.getElementById('demon').addEventListener('mouseover', function () {fly.play(); });
                 document.getElementById('god').addEventListener('mouseover', function () {windchimes.play(); });
+                document.getElementById('hell').addEventListener('mouseover', function () {bubble.play(); });
+                document.getElementById('6heads').addEventListener('mouseover', function () {sad.play(); });
             };
         </script>
 
