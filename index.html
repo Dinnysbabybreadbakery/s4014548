@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+        <title>Icon Template Percentage</title>
+        <style>
+            body {
+                background-color: floralwhite;
+            }
+            .row{
+                margin-top:40px;
+            }
+            .left-column{
+                float:left;
+                width:30%;
+                margin-left:30px;
+            }
+            .center-column{
+                width:30%;
+                margin:auto;
+            }
+            .right-column{
+                float:right;
+                width:30%;
+                margin:auto;
+            }
+            .image-container{
+                display: table-cell;
+                vertical-align: middle;
+                margin: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="left-column"><div class="image-container"><img id="6heads" src="img/1.png" height="220" width="200"/></div></div>
+            <div class="right-column"><div class="image-container"><img id="spin" src="img/3.png" height="200" width="210"/></div></div>
+            <div class="center-column"><div class="image-container"><img id="heart" src="img/2.png" height="200" width="200"/></div></div>
+        </div>
+
+        <div class="row">
+            <div class="left-column"><div class="image-container"><img id="speech" src="img/4.png" height="200" width="200"/></div></div>
+            <div class="right-column"><div class="image-container"><img id="skull" src="img/6.png" height="200" width="200"/></div></div>
+            <div class="center-column"><div class="image-container"><img id="crack" src="img/5.png" height="200" width="200"/></div></div>
+        </div>
+
+        <div class="row">
+            <div class="left-column"><div class="image-container"><img id="demon" src="img/7.png" height="200" width="200"/></div></div>
+            <div class="right-column"><div class="image-container"><img id="hell" src="img/9.png" height="200" width="200"/></div></div>
+            <div class="center-column"><div class="image-container"><img id="god" src="img/8.png" height="200" width="190"/></div></div>
+        </div>
+
+        <script>
+            var wind = new buzz.sound("audio/WindStormCold_S011SSFX.403.wav");
+            var spins = new buzz.sound("audio/whell.wav");
+            var crack = new buzz.sound("audio/CeilingCrackWood_SFXB.2187.wav");
+            var fire = new buzz.sound("audio/FireplaceCrackle_SFXB.647.wav");
+            var fly = new buzz.sound("audio/MonsterWingsFlap_SFXB.1452.wav");
+            var windchimes = new buzz.sound("audio/WindChimesMetal_SFXB.1091.wav");
+            var bubble = new buzz.sound("audio/hell bubble.wav");
+            var minnie = new buzz.sound("audio/minnie.wav");
+            var sad = new buzz.sound("audio/sad.wav");
+
+            
+            window.onload = function() {
+                document.getElementById('speech').addEventListener('mousedown', function () {minnie.play(); });
+                document.getElementById('spin').addEventListener('mousedown', function () {spins.play(); });
+                document.getElementById('heart').addEventListener('mousedown', function () {wind.play(); });
+                document.getElementById('skull').addEventListener('mousedown', function () {fire.play(); });
+                document.getElementById('crack').addEventListener('mousedown', function () {crack.play(); });
+                document.getElementById('demon').addEventListener('mousedown', function () {fly.play(); });
+                document.getElementById('god').addEventListener('mousedown', function () {windchimes.play(); });
+                document.getElementById('hell').addEventListener('mousedown', function () {bubble.play(); });
+                document.getElementById('6heads').addEventListener('mousedown', function () {sad.play(); });
+            };
+        </script>
+
+    </body>
+    
+</html>
